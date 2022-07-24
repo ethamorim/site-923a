@@ -1,0 +1,264 @@
+.home {
+    padding: 10px;
+    background-image: linear-gradient(
+        60deg,
+        $backgroundGradient1,
+        $backgroundGradient2,
+        $backgroundGradient3
+    );
+
+    & h2 {
+        margin: 10px 0;
+        padding: 10px;
+        font-family: $raleway;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    & button {
+        font-weight: 300;
+    }
+}
+
+.destaque {
+    border-top: 1px solid $brancoSite;
+    border-bottom: 1px solid $brancoSite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+        background-color: #0000006e;
+        font-weight: 600;
+    }
+
+    & .fardas {
+        position: relative;
+        width: 400px; height: 400px;
+
+        & img {
+            position: absolute;
+            width: 16.8rem;
+        }
+
+        & .frente {
+            z-index: 1;
+            top: 7rem;
+            right: 5%;
+        }
+
+        & .verso {
+            top: 1rem;
+            left: 5%;
+            opacity: 0.8;
+        }
+    }
+
+    & p {
+        font-size: 1.5rem;
+        font-family: $raleway;
+        text-align: center;
+    }
+
+    & .opcoes-fardas {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-around;
+
+        & button {
+            width: 45%;
+            height: 50px;
+            border: 4px solid $brancoSite;
+            border-radius: 32px;
+            background-color: $botaoToggle;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: $brancoSite;
+
+            &:hover {
+                background-color: $botaoToggleAtivo;
+                color: $preto;
+            }
+        }
+
+        & .ativa {
+            background-color: $botaoToggleAtivo;
+            color: $preto;
+
+            &:hover {
+                background-color: $botaoToggleAtivoHover;
+                border: 4px solid $botaoToggleAtivoHover;
+            }
+        }
+    }
+}
+
+.pedido {
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h3 {
+        margin: 15px 0 0;
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+
+    & p {
+        margin: 10px 0;
+    }
+
+    & a {
+        width: 250px; height: 50px;
+        margin: 10px;
+        background-color: $botaoComum;
+        text-transform: uppercase;
+        color: $brancoSite;
+        text-decoration: none;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $botaoComumHover;
+        }
+    }
+}
+
+.avisos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $raleway;
+    margin-bottom: 30px;
+
+    & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        & .card-aviso {
+            width: 340px; height: 230px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: $cardAviso;
+            display: flex;
+            flex-direction: column;
+
+            & .imagem-aviso {
+                height: 80%;
+            }
+
+            & .titulo-aviso {
+                height: calc(230px - 80%);
+                background-color: $brancoSite;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+
+                text-align: center;
+                color: $preto;
+                font-weight: 300;
+                font-size: 1.4rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    & .ver-mais-avisos {
+        width: 45%;
+        height: 50px;
+        margin: 20px;
+        border: none;
+        border-radius: 32px;
+        background-color: $botaoComum;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $brancoSite;
+    }
+}
+
+.horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+
+    & p {
+        margin: 0;
+    }
+}
+
+.representantes {
+    background-color: $representantes;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .card-representante {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: $card;
+
+
+        & .rep {
+            display: flex;
+            align-items: center;
+
+            & .bandeira {
+                border-radius: 8px;
+                padding: 8px;
+                background-color: black;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            & img {
+               width: 9.3rem;
+               border-radius: 8px;
+            }
+
+            & .rep__info {
+                height: 10.2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                & .conhecendo {
+                    text-align: right;
+
+                    & h3 {
+                        font-weight: 300;
+                        margin: 0;
+                    }
+
+                    & .titulo {
+                        opacity: .7;
+                    }
+                }
+
+                & .sobre {
+                    padding: 5px;
+                    font-size: .9rem;
+
+                    & p {
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+    }
+}

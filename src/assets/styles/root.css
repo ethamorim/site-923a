@@ -1,0 +1,25 @@
+:root {
+    --background-gradient-1: #0A3A35;
+    --background-gradient-2: #0B756C;
+    --background-gradient-3: #1C5350;
+    --header: #2B083F;
+    --representantes: #2B083F;
+    --footer: #2B083F;
+    --botao-comum: #440E63;
+    --botao-comum-hover: #4e136ed5;
+    --botao-toggle-ativo: #F1FAEE;
+    --botao-toggle-ativo-hover: #c1c8be;
+    --botao-toggle: transparent;
+    --botao-toggle-hover:#F1FAEE;
+
+    --card-aviso: #D8D8D8;
+    --alerta: #FFF598;
+    --card: #4E136E;
+
+    --branco: #fff;
+    --preto: #000;
+    --branco-site: #F1FAEE;
+
+    --poppins: 'Poppins', sans-serif;
+    --raleway: 'Raleway', sans-serif;
+}

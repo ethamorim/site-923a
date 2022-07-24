@@ -1,0 +1,38 @@
+header {
+    background-color: $header;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    padding: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    & img {
+        width: 3.2rem;
+    }
+
+    & .turma {
+        margin: 5px;
+        font-weight: 600;
+    }
+
+}
+
+nav {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & a, & router-link {
+        margin: 5px;
+        text-decoration: none;
+        color: $brancoSite;
+    }
+}
