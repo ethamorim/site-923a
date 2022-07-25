@@ -1,0 +1,85 @@
+footer {
+    background-color: $footer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .rodape {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+
+        & .logo-ifal {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & img {
+                width: 7.5rem;
+            }
+
+            & p {
+                width: 80%;
+                margin: 0;
+                font-size: .8rem;
+            }
+
+        }
+    }
+
+    & .creditos {
+        margin: 20px 0;
+        font-size: .8rem;
+    }
+}
+
+.outras-infos {
+    padding: 10px;
+
+    & h3 {
+        padding: 5px;
+        background-color: #0000002d;
+        font-size: 1.3rem;
+    }
+
+    & ul {
+        padding-left: 20px;
+        margin: 0;
+        list-style: none;
+
+        & li {
+            margin: 15px 0;
+
+            & span {
+                display: block;
+            }
+
+            & a {
+                color: $brancoSite;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                & .site {
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                & .material-icons-round {
+                    margin: 10px;
+                }
+            }
+
+        }
+    }
+
+    & .em-breve-professores {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: $alerta;
+    }
+}

@@ -2,7 +2,7 @@
     <section class="card-representante">
         <div class="rep">
             <div class="bandeira" :class="rep.bandeira">
-                <img :src="foto" :alt="rep.altImagem">
+                <img :src="rep.imagem" :alt="rep.altImagem">
             </div>
 
             <div class="rep__info">
@@ -11,12 +11,13 @@
                     <span class="titulo">{{ rep.titulo }}</span>
                 </div>
 
-                <div class="sobre">
-                    <p>
-                        {{ rep.sobre }}
-                    </p>
-                </div>
             </div>
+        </div>
+
+        <div class="sobre">
+            <p>
+                {{ rep.sobre }}
+            </p>
         </div>
 
         <div class="contato">
@@ -37,15 +38,7 @@
 <script>
 
     export default {
-        props: ['rep'],
-        data() {
-            return {
-                foto: null
-            }
-        },
-        mounted() {
-            this.foto = '/' + this.rep.imagem;
-        }
+        props: ['rep']
     }
 
 </script>

@@ -253,6 +253,7 @@
 
             & .rep__info {
                 height: 10.2rem;
+                padding-left: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -269,17 +270,16 @@
                         opacity: .7;
                     }
                 }
-
-                & .sobre {
-                    padding: 5px;
-                    font-size: .9rem;
-
-                    & p {
-                        margin: 0;
-                    }
-                }
             }
+        }
 
+        & .sobre {
+            padding: 5px;
+            font-size: 1rem;
+
+            & p {
+                margin: 0;
+            }
         }
 
         & .contato {

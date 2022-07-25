@@ -71,7 +71,7 @@
             return {
                 representantes: [
                     {
-                        imagem: 'representate.jpeg',
+                        imagem: 'https://user-images.githubusercontent.com/87045182/180874614-8191bd44-3aa1-437a-ac75-7bc3c6a97dd7.jpeg',
                         altImagem: 'foto de Ytalo dos Santos Amorim, representante da 923A',
                         bandeira: 'bandeira-gay',
                         nome: 'Ytalo',
@@ -83,7 +83,7 @@
                         email: 'ysa4@aluno.ifal.edu.br'
                     },
                     {
-                        imagem: 'vice-representate.jpeg',
+                        imagem: 'https://user-images.githubusercontent.com/87045182/180874685-7ae7ab72-698d-41fc-90d6-ffb6cd7a8780.jpeg',
                         altImagem: 'foto de Alexia Rodrigues, vice-representante da 923A',
                         bandeira: 'bandeira-bi',
                         nome: 'Alexia',

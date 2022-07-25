@@ -17,6 +17,68 @@
     <router-view />
 
     <footer>
+        <div class="rodape">
+            <section class="logo-ifal">
+                <img src="@/assets/imgs/ifal-logo.png" alt="Logo do Instituto Federal de Alagoas">
+                <p>
+                    Instituto Federal de Educação, Ciência e Tecnologia de Alagoas
+                    <br />
+                    <strong>Campus Maceió</strong>
+                </p>
+            </section>
 
+            <div class="outras-infos">
+                <section class="outros-contatos">
+                    <h3>Outros contatos</h3>
+
+                    <ul>
+                        <li>
+                            <span><strong>email da turma:</strong></span>
+                            <span>devsistemas2020@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><strong>coordenação do curso:</strong></span>
+                            <span>coord.info.maceio@ifal.edu.br</span>
+                        </li>
+                        <li>
+                            <span><strong>coordenação de estágio (CREE):</strong></span>
+                            <span>cree@ifal.edu.br</span>
+                        </li>
+                    </ul>
+
+                    <p class="em-breve-professores">em breve os contatos dos professores estarão disponíveis</p>
+                </section>
+
+                <section class="outros-sites">
+                    <h3>Outros sites</h3>
+
+                    <ul>
+                        <li>
+                            <span><strong>sigaa:</strong></span>
+                            <a href="https://sigaa.ifal.edu.br/sigaa/public/home.jsf" target="_blank">
+                                <span class="site">sigaa.ifal.edu.br</span>
+                                <i class="material-icons-round">open_in_new</i>
+                            </a>
+                        </li>
+                        <li>
+                            <span><strong>portal do ifal:</strong></span>
+                            <a href="https://www2.ifal.edu.br/" target="_blank">
+                                <span class="site">www2.ifal.edu.br</span>
+                                <i class="material-icons-round">open_in_new</i>
+                            </a>
+                        </li>
+                        <li>
+                            <span><strong>mundo do trabalho:</strong></span>
+                            <a href="mundodotrabalho.ifal.edu.br/" target="_blank">
+                                <span class="site">mundodotrabalho.ifal.edu.br</span>
+                                <i class="material-icons-round">open_in_new</i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <span class="creditos">2022 Desenvolvido por Ytalo Ethaniel Amorim</span>
     </footer>
 </template>
