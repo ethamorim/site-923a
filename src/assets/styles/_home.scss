@@ -206,6 +206,7 @@
     align-items: center;
 
     & .card-representante {
+        margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
         background-color: $card;
@@ -223,6 +224,26 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+
+            & .bandeira-gay {
+                background-image: linear-gradient(
+                    #078d70,
+                    #26ceaa,
+                    #98e8c1,
+                    #efefff,
+                    #7bade2,
+                    #5049cc,
+                    #3d1a78
+                );
+            }
+
+            & .bandeira-bi {
+                background-image: linear-gradient(
+                    #de0068,
+                    #a30995,
+                    #3900ab
+                );
             }
 
             & img {
@@ -259,6 +280,24 @@
                 }
             }
 
+        }
+
+        & .contato {
+            margin: 10px 0 0;
+            padding: 10px;
+            background-color: #0000004b;
+            display: flex;
+            flex-direction: column;
+
+            & h4 {
+                margin: 0;
+            }
+
+            & ul {
+                margin: 0;
+                padding-left: 10px;
+                list-style: none;
+            }
         }
     }
 }
