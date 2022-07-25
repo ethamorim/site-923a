@@ -1,11 +1,16 @@
 <template>
     <header>
+        <div class="menu" @click.left="alternarMenu()">
+            <i class="material-icons-round" v-if="!menuAberto">menu</i>
+            <i class="material-icons-round" v-else>menu_open</i>
+        </div>
+
         <div class="logo">
             <img src="@/assets/imgs/logo-desenv-sistemas.png" alt="Brasão do curso de Desenvolvimento de Sistemas, criado por Bruno Lucas">
             <span class="turma">923A</span>
         </div>
 
-        <nav>
+        <nav v-if="menuAberto">
             <a href="#">Home</a>
             <a href="#">Avisos</a>
             <a href="#">Horários</a>
@@ -82,3 +87,20 @@
         <span class="creditos">2022 Desenvolvido por Ytalo Ethaniel Amorim</span>
     </footer>
 </template>
+
+<script>
+
+    export default {
+        data() {
+            return {
+                menuAberto: false,
+            }
+        },
+        methods: {
+            alternarMenu() {
+                this.menuAberto = !this.menuAberto;
+            }
+        }
+    }
+
+</script>
