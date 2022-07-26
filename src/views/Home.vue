@@ -3,22 +3,29 @@
         <section class="destaque">
             <h2>As fardas do 3° ano nunca estiveram tão perto!</h2>
 
-            <Transition name="uniforme">
-                <Fardas
-                    v-if="fardaAtiva === 'casual'"
-                    :farda="fardas.casual"
-                />
-                <Fardas
-                    v-else-if="fardaAtiva === 'polo'"
-                    :farda="fardas.polo"
-                />
-            </Transition>
-
+            <Fardas
+                :class="(fardaAtiva === 'casual') ? 'uniforme-entrando' : ''"
+                v-show="fardaAtiva === 'casual'"
+                :farda="fardas.casual"
+            />
+            <Fardas
+                :class="(fardaAtiva === 'polo') ? 'uniforme-entrando' : ''"
+                v-show="fardaAtiva === 'polo'"
+                :farda="fardas.polo"
+            />
 
             <p>Confira os designs escolhidos pelas turmas do curso:</p>
             <div class="opcoes-fardas">
-                <button :class="(fardaAtiva === 'casual') ? 'ativa' : ''" @click.prevent="setFarda('casual')">Casual</button>
-                <button :class="(fardaAtiva === 'polo') ? 'ativa' : ''" @click.prevent="setFarda('polo')">Polo</button>
+                <button
+                    :class="(fardaAtiva === 'casual') ? 'ativa' : ''"
+                    @click.prevent="setFarda('casual')">
+                    Casual
+                </button>
+                <button
+                    :class="(fardaAtiva === 'polo') ? 'ativa' : ''"
+                    @click.prevent="setFarda('polo')">
+                    Polo
+                </button>
             </div>
         </section>
 
