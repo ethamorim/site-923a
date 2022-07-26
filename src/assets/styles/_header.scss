@@ -34,15 +34,66 @@ header {
 }
 
 nav {
-    margin: 10px 0;
+    width: 100%;
     font-size: 1.2rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     & a, & router-link {
-        margin: 5px;
+        width: 100%;
+        padding: 10px;
         text-decoration: none;
         color: $brancoSite;
+
+        &:hover, &:focus {
+            background-color: $botaoComumHover;
+        }
+    }
+}
+
+.open-enter-active {
+    animation-name: abrir-menu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.open-leave-active {
+    animation-name: fechar-menu;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes abrir-menu {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 250px;
+    }
+}
+
+@keyframes fechar-menu {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+        height: 250px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
     }
 }

@@ -10,19 +10,21 @@
             <span class="turma">923A</span>
         </div>
 
-        <nav v-if="menuAberto">
-            <a href="#">Home</a>
-            <a href="#">Avisos</a>
-            <a href="#">Horários</a>
-            <a href="#">Contatos</a>
-            <router-link to="/">Atividades</router-link>
-        </nav>
+        <Transition name="open">
+            <nav v-if="menuAberto">
+                <router-link to="/" @click="irParaSecao('home')">Home</router-link>
+                <router-link to="/" @click="irParaSecao('avisos')">Avisos</router-link>
+                <router-link to="/" @click="irParaSecao('horarios')">Horários</router-link>
+                <router-link to="/" @click="irParaSecao('contatos')">Contatos</router-link>
+                <router-link to="/">Atividades</router-link>
+            </nav>
+        </Transition>
     </header>
 
     <router-view />
 
     <footer>
-        <div class="rodape">
+        <div id="contatos" class="rodape">
             <section class="logo-ifal">
                 <img src="@/assets/imgs/ifal-logo.png" alt="Logo do Instituto Federal de Alagoas">
                 <p>
@@ -99,6 +101,9 @@
         methods: {
             alternarMenu() {
                 this.menuAberto = !this.menuAberto;
+            },
+            irParaSecao(secao) {
+                document.getElementById(secao).scrollIntoView();
             }
         }
     }

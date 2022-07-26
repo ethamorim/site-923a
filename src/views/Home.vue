@@ -1,5 +1,5 @@
 <template>
-    <main class="home">
+    <main id="home" class="home">
         <section class="destaque">
             <h2>As fardas do 3° ano nunca estiveram tão perto!</h2>
 
@@ -31,7 +31,7 @@
             <a class="botao-forms" href="#">Forms</a>
         </section>
 
-        <section class="avisos">
+        <section id="avisos" class="avisos">
             <h2>Avisos</h2>
 
             <div class="cards">
@@ -41,7 +41,7 @@
             <button class="ver-mais-avisos">Ver mais</button>
         </section>
 
-        <section class="horarios">
+        <section id="horarios" class="horarios">
             <h2>Horários de aula</h2>
             <p>Os horários ainda não estão disponíveis. Em breve serão disponibilizados nessa seção.</p>
         </section>
