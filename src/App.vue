@@ -120,7 +120,8 @@
                 this.menuAberto = !this.menuAberto;
             },
             irParaSecao(secao) {
-                document.getElementById(secao).scrollIntoView();
+                document.getElementById(secao).scrollIntoView({behavior: 'smooth'});
+                this.menuAberto = false;
             },
             abrirObsEmailTurma() {
                 this.obsEmailVisivel = true;
