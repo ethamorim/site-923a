@@ -3,28 +3,29 @@
         <section class="destaque">
             <h2>As fardas do 3° ano nunca estiveram tão perto!</h2>
 
-            <div class="fardas">
-                <img
-                class="frente"
-                src="@/assets/imgs/farda-casual-frente.png"
-                alt="Frente da farda casual do curso de Desenvolvimento de Sistemas" />
-                <img
-                class="verso"
-                src="@/assets/imgs/farda-casual-verso.png"
-                alt="Verso da farda casual do curso de Desenvolvimento de Sistemas" />
-            </div>
+            <Transition name="uniforme">
+                <Fardas
+                    v-if="fardaAtiva === 'casual'"
+                    :farda="fardas.casual"
+                />
+                <Fardas
+                    v-else-if="fardaAtiva === 'polo'"
+                    :farda="fardas.polo"
+                />
+            </Transition>
+
 
             <p>Confira os designs escolhidos pelas turmas do curso:</p>
             <div class="opcoes-fardas">
-                <button class="ativa">Casual</button>
-                <button>Polo</button>
+                <button :class="(fardaAtiva === 'casual') ? 'ativa' : ''" @click="setFarda('casual')">Casual</button>
+                <button :class="(fardaAtiva === 'polo') ? 'ativa' : ''" @click="setFarda('polo')">Polo</button>
             </div>
         </section>
 
         <section class="pedido">
             <h3>Faça seu pedido pelo forms!</h3>
             <p class="obs">
-                Pague metade do preço até o dia 20 de agosto
+                Pague metade do preço até o dia 31 de Julho
                 e pague o restante apenas quando receber as fardas
             </p>
 
@@ -61,11 +62,18 @@
 <script>
     import CardAviso from '@/components/CardAviso.vue';
     import Representante from '@/components/Representante.vue';
+    import Fardas from '@/components/Fardas.vue';
 
     export default {
         components: {
             CardAviso,
             Representante,
+            Fardas
+        },
+        methods: {
+            setFarda(nome) {
+                this.fardaAtiva = nome;
+            }
         },
         data() {
             return {
@@ -94,7 +102,20 @@
                         telefone: '(82) 988782195',
                         email: 'arso1@aluno.ifal.edu.br'
                     }
-                ]
+                ],
+                fardas: {
+                    casual: {
+                        nome: 'casual',
+                        frente: 'https://user-images.githubusercontent.com/87045182/180905631-04446bb4-96d4-4efc-8bde-903821eb45b5.png',
+                        verso: 'https://user-images.githubusercontent.com/87045182/180905635-2d0b7b6c-f008-438e-b6df-154b8213097c.png'
+                    },
+                    polo: {
+                        nome: 'polo',
+                        frente: 'https://user-images.githubusercontent.com/87045182/180905664-aefc439c-c2a4-4366-b26f-55aa14951626.png',
+                        verso: 'https://user-images.githubusercontent.com/87045182/180905671-5db2f6ee-b144-472b-bdff-d0471664b125.png'
+                    }
+                },
+                fardaAtiva: 'casual'
             }
         }
     }

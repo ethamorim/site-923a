@@ -42,6 +42,13 @@
             width: 16.8rem;
         }
 
+        & .frente, & .verso {
+            animation-name: floating;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
         & .frente {
             z-index: 1;
             top: 7rem;
@@ -52,6 +59,7 @@
             top: 1rem;
             left: 5%;
             opacity: 0.8;
+            animation-delay: .5s;
         }
     }
 
@@ -92,6 +100,34 @@
                 border: 4px solid $botaoToggleAtivoHover;
             }
         }
+    }
+}
+
+.uniforme-enter-active {
+    animation: aumentando-opacidade 1s ease-in forwards;
+}
+
+@keyframes aumentando-opacidade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
