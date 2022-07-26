@@ -36,7 +36,12 @@
                 e pague o restante apenas quando receber as fardas
             </p>
 
-            <a class="botao-forms" href="#">Forms</a>
+            <a
+                class="botao-forms"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe5kXO9uitw_3bT6dkX_nSnTp6i65uQRKh8rCM4HR7anw8Gdw/viewform"
+                target="_blank">
+                Forms
+            </a>
         </section>
 
         <section id="avisos" class="avisos">
