@@ -130,17 +130,7 @@
 }
 
 .uniforme-entrando {
-    animation: aumentando-opacidade 1s ease-in forwards;
-}
-
-@keyframes aumentando-opacidade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    animation: aumentando-opacidade .5s ease-in forwards;
 }
 
 @keyframes floating {

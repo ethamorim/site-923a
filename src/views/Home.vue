@@ -32,7 +32,7 @@
         <section class="pedido">
             <h3>Faça seu pedido pelo forms!</h3>
             <p class="obs">
-                Pague metade do preço até o dia 31 de Julho
+                Pague metade do preço até o dia 25 de Julho
                 e pague o restante apenas quando receber as fardas
             </p>
 

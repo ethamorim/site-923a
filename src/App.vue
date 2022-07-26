@@ -23,7 +23,7 @@
 
     <router-view />
 
-    <footer @mousemove="fecharObsEmailTurma()">
+    <footer>
         <div id="contatos" class="rodape">
             <section class="logo-ifal">
                 <img src="@/assets/imgs/ifal-logo.png" alt="Logo do Instituto Federal de Alagoas">
@@ -44,9 +44,18 @@
                                 <strong>email da turma:</strong>
                                 <i
                                     class="material-icons-round"
-                                    @click.left="alternarObsEmailTurma()">
+                                    @click.left="abrirObsEmailTurma()">
                                     error_outline
                                 </i>
+
+                                <article
+                                    id="obs-email-turma"
+                                    :class="(obsEmailVisivel) ? 'obs-email-entrando' : ''"
+                                    v-if="obsEmailVisivel"
+                                    >
+                                    <div class="triangulo-esquerda"></div>
+                                    <p>Caso haja a necessidade de ter a senha, contatar os representantes da turma</p>
+                                </article>
                             </span>
                             <span>devsistemas2020@gmail.com</span>
                         </li>
@@ -61,14 +70,6 @@
                     </ul>
 
                     <p class="em-breve-professores">em breve os contatos dos professores estarão disponíveis</p>
-
-                    <article
-                        id="obs-email-turma"
-                        v-if="obsEmailVisivel"
-                        >
-                        <div class="triangulo-esquerda"></div>
-                        <p>Caso haja a necessidade de ter a senha, contatar os representantes da turma</p>
-                    </article>
                 </section>
 
                 <section class="outros-sites">
@@ -121,16 +122,15 @@
             irParaSecao(secao) {
                 document.getElementById(secao).scrollIntoView();
             },
-            alternarObsEmailTurma() {
-                this.obsEmailVisivel = !this.obsEmailVisivel;
-            },
             abrirObsEmailTurma() {
                 this.obsEmailVisivel = true;
-            },
-            fecharObsEmailTurma() {
-                if (this.obsEmailVisivel) {
-                    this.obsEmailVisivel = false;
-                }
+
+                const fechar = setInterval(() => {
+                    if (this.obsEmailVisivel) {
+                        this.obsEmailVisivel = false;
+                        clearInterval(fechar);
+                    }
+                }, 2500);
             }
         }
     }
