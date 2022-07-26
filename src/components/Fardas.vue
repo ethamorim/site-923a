@@ -1,9 +1,10 @@
 <template>
-    <div class="fardas">
+    <div class="fardas" :class="farda.nome">
         <img
         class="frente"
         :src="farda.frente"
         :alt="`Frente da farda ${farda.nome} do curso de Desenvolvimento de Sistemas`" />
+
         <img
         class="verso"
         :src="farda.verso"

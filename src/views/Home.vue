@@ -17,8 +17,8 @@
 
             <p>Confira os designs escolhidos pelas turmas do curso:</p>
             <div class="opcoes-fardas">
-                <button :class="(fardaAtiva === 'casual') ? 'ativa' : ''" @click="setFarda('casual')">Casual</button>
-                <button :class="(fardaAtiva === 'polo') ? 'ativa' : ''" @click="setFarda('polo')">Polo</button>
+                <button :class="(fardaAtiva === 'casual') ? 'ativa' : ''" @click.prevent="setFarda('casual')">Casual</button>
+                <button :class="(fardaAtiva === 'polo') ? 'ativa' : ''" @click.prevent="setFarda('polo')">Polo</button>
             </div>
         </section>
 
