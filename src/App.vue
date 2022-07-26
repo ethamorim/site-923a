@@ -23,7 +23,7 @@
 
     <router-view />
 
-    <footer>
+    <footer @mousemove="fecharObsEmailTurma()">
         <div id="contatos" class="rodape">
             <section class="logo-ifal">
                 <img src="@/assets/imgs/ifal-logo.png" alt="Logo do Instituto Federal de Alagoas">
@@ -40,7 +40,14 @@
 
                     <ul>
                         <li>
-                            <span><strong>email da turma:</strong></span>
+                            <span class="email-turma">
+                                <strong>email da turma:</strong>
+                                <i
+                                    class="material-icons-round"
+                                    @click.left="alternarObsEmailTurma()">
+                                    error_outline
+                                </i>
+                            </span>
                             <span>devsistemas2020@gmail.com</span>
                         </li>
                         <li>
@@ -54,6 +61,14 @@
                     </ul>
 
                     <p class="em-breve-professores">em breve os contatos dos professores estarão disponíveis</p>
+
+                    <article
+                        id="obs-email-turma"
+                        v-if="obsEmailVisivel"
+                        >
+                        <div class="triangulo-esquerda"></div>
+                        <p>Caso haja a necessidade de ter a senha, contatar os representantes da turma</p>
+                    </article>
                 </section>
 
                 <section class="outros-sites">
@@ -96,6 +111,7 @@
         data() {
             return {
                 menuAberto: false,
+                obsEmailVisivel: false,
             }
         },
         methods: {
@@ -104,6 +120,17 @@
             },
             irParaSecao(secao) {
                 document.getElementById(secao).scrollIntoView();
+            },
+            alternarObsEmailTurma() {
+                this.obsEmailVisivel = !this.obsEmailVisivel;
+            },
+            abrirObsEmailTurma() {
+                this.obsEmailVisivel = true;
+            },
+            fecharObsEmailTurma() {
+                if (this.obsEmailVisivel) {
+                    this.obsEmailVisivel = false;
+                }
             }
         }
     }

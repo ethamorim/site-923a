@@ -20,7 +20,7 @@ footer {
             }
 
             & p {
-                width: 80%;
+                width: 60%;
                 margin: 0;
                 font-size: .8rem;
             }
@@ -77,9 +77,63 @@ footer {
         }
     }
 
+    & .outros-contatos {
+        position: relative;
+    }
+
+    & .email-turma {
+        display: flex;
+        align-items: center;
+
+        & i {
+            margin: 5px 5px 5px 10px;
+            font-size: 1.5rem;
+            color: #ffc67b;
+        }
+
+    }
+
     & .em-breve-professores {
         padding: 10px;
         border-radius: 8px;
         background-color: $alerta;
+    }
+}
+
+#obs-email-turma {
+    position: absolute;
+    left: 180px;
+    top: -10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $alerta;
+    font-size: .8rem;
+
+    & p {
+        margin: 0;
+    }
+
+    & .triangulo-esquerda {
+        position: absolute;
+        bottom: 5px;
+        left: -13px;
+
+        border-right: 7px solid $alerta;
+
+        border-bottom: 7px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #obs-email-turma {
+        top: -10px;
+
+        & .triangulo-esquerda {
+            bottom: 5px;
+            left: -14px;
+        }
     }
 }
