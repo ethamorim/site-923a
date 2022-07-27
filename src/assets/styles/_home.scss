@@ -1,14 +1,14 @@
 .home {
     padding: 10px;
     background-image: linear-gradient(
-        180deg,
-        hsl(167deg 36% 32%) 0%,
-        hsl(172deg 43% 27%) 29%,
-        hsl(177deg 52% 23%) 43%,
-        hsl(181deg 64% 20%) 57%,
-        hsl(184deg 83% 16%) 71%,
-        hsl(187deg 100% 14%) 100%
+        320deg,
+        $backgroundGradient1,
+        $backgroundGradient2,
+        $backgroundGradient3
     );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & h2 {
         margin: 10px 0;
@@ -24,231 +24,11 @@
     }
 }
 
-.destaque {
-    border-top: 1px solid $brancoSite;
-    border-bottom: 1px solid $brancoSite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    & h2 {
-        background-color: #0000006e;
-        font-weight: 600;
-    }
-
-    & p {
-        font-size: 1.5rem;
-        font-family: $raleway;
-        text-align: center;
-    }
-
-    & .opcoes-fardas {
-        width: 100%;
-        margin-bottom: 30px;
-        display: flex;
-        justify-content: space-around;
-
-        & button {
-            width: 45%;
-            height: 50px;
-            border: 4px solid $brancoSite;
-            border-radius: 32px;
-            background-color: $botaoToggle;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-            color: $brancoSite;
-
-            &:active {
-                background-color: $botaoToggleAtivo;
-                color: $preto;
-            }
+@media screen and (min-width: 1024px) {
+    .home {
+        & h2 {
+            font-size: 2.5rem;
         }
-
-        & .ativa {
-            background-color: $botaoToggleAtivo;
-            color: $preto;
-
-            &:active {
-                background-color: $botaoToggleAtivoHover;
-                border: 4px solid $botaoToggleAtivoHover;
-            }
-        }
-    }
-}
-
-.fardas {
-    position: relative;
-    width: 400px; height: 400px;
-
-    &::before {
-        content: ' ';
-        position: absolute;
-        bottom: 0;
-        left: 10%;
-        width: 80%;
-        height: 5px;
-        border-radius: 50%;
-        background-color: $backgroundGradient1;
-        filter: blur(7px);
-    }
-
-    & img {
-        position: absolute;
-        width: 18rem;
-    }
-
-    & .frente, & .verso {
-        animation-name: floating;
-        animation-duration: 5s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    & .frente {
-        z-index: 1;
-        right: 5%;
-    }
-
-    & .verso {
-        top: 1rem;
-        left: 5%;
-        opacity: 0.8;
-        animation-delay: .5s;
-    }
-}
-
-.casual {
-    & .frente {
-        top: 6rem;
-    }
-}
-
-.polo {
-    & .frente {
-        top: 4rem;
-    }
-}
-
-.uniforme-entrando {
-    animation: aumentando-opacidade .5s ease-in forwards;
-}
-
-@keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.pedido {
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    & h3 {
-        margin: 15px 0 0;
-        font-weight: 300;
-        font-size: 1.5rem;
-    }
-
-    & p {
-        margin: 10px 0;
-    }
-
-    & a {
-        width: 250px; height: 50px;
-        margin: 10px;
-        background-color: $botaoComum;
-        text-transform: uppercase;
-        color: $brancoSite;
-        text-decoration: none;
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:active {
-            background-color: $botaoComumHover;
-        }
-    }
-}
-
-.avisos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: $raleway;
-    margin-bottom: 30px;
-
-    & .cards {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-
-        & .card-aviso {
-            width: 340px; height: 230px;
-            margin: 10px;
-            border-radius: 8px;
-            background-color: $cardAviso;
-            display: flex;
-            flex-direction: column;
-
-            & .imagem-aviso {
-                height: 80%;
-            }
-
-            & .titulo-aviso {
-                height: calc(230px - 80%);
-                background-color: $brancoSite;
-                border-bottom-right-radius: 8px;
-                border-bottom-left-radius: 8px;
-
-                text-align: center;
-                color: $preto;
-                font-weight: 300;
-                font-size: 1.4rem;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-    }
-
-    & .ver-mais-avisos {
-        width: 45%;
-        height: 50px;
-        margin: 20px;
-        border: none;
-        border-radius: 32px;
-        background-color: $botaoComum;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        color: $brancoSite;
-    }
-}
-
-.horarios {
-    padding: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    & p {
-        margin: 0;
     }
 }
 
@@ -261,7 +41,17 @@
     flex-direction: column;
     align-items: center;
 
+    & h2 {
+        margin: 10px 0;
+        padding: 10px;
+        font-family: $raleway;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
     & .card-representante {
+        position: relative;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
@@ -270,7 +60,7 @@
 
         & .rep {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: space-between;
 
             & .bandeira {
@@ -355,6 +145,41 @@
                 margin: 0;
                 padding-left: 10px;
                 list-style: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .representantes {
+        & .card-representante {
+            width: 830px;
+
+            .rep {
+                & img {
+                    width: 14rem;
+                }
+
+                &__info {
+                    & h3 {
+                        font-size: 1.5rem;
+                    }
+
+                    & .titulo {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            & .outras-rep-info {
+                width: 65%;
+                position: absolute;
+                bottom: .5rem;
+                right: 10px;
+            }
+
+            & .sobre {
+                width: 80%;
             }
         }
     }

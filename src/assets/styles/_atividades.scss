@@ -1,0 +1,89 @@
+.atividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $raleway;
+    margin-bottom: 30px;
+
+    & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        & .card-atividade {
+            width: 340px; height: 230px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: $cardAviso;
+            display: flex;
+            flex-direction: column;
+
+            & .imagem-atividade {
+                height: 80%;
+            }
+
+            & .titulo-atividade {
+                height: calc(230px - 80%);
+                background-color: $brancoSite;
+                border-bottom-right-radius: 8px;
+                border-bottom-left-radius: 8px;
+
+                text-align: center;
+                color: $preto;
+                font-weight: 300;
+                font-size: 1.4rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    & .ver-mais-atividades {
+        max-width: 350px;
+        width: 45%;
+        height: 50px;
+        margin: 20px;
+        border: none;
+        border-radius: 32px;
+        background-color: $botaoComum;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $brancoSite;
+
+        &:active {
+            background-color: $botaoComumHover;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .atividades {
+        width: 100%;
+
+        & .cards {
+            width: inherit;
+
+            & .card-atividade {
+                min-width: 350px;
+                width: 30%; height: 350px;
+
+                & .titulo-atividade {
+                    height: 70px;
+                }
+            }
+        }
+
+        & .ver-mais-atividades {
+            height: 60px;
+            margin: 30px;
+
+            &:hover {
+                background-color: $botaoComumHover;
+            }
+        }
+    }
+
+}

@@ -34,6 +34,27 @@ footer {
     }
 }
 
+@media screen and (min-width: 780px) {
+    footer {
+        font-size: 1.2rem;
+
+        & .rodape {
+            flex-direction: row;
+            align-items: center;
+
+            & .logo-ifal {
+                & p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        & .creditos {
+            font-size: 1rem;
+        }
+    }
+}
+
 .outras-infos {
     padding: 10px;
 
@@ -97,6 +118,25 @@ footer {
         padding: 10px;
         border-radius: 8px;
         background-color: $alerta;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .outras-infos {
+        display: flex;
+        width: 60vw;
+
+        & section {
+            margin: 10px;
+        }
+
+        & .outros-contatos {
+            width: 50%;
+        }
+
+        & .outros-sites {
+            width: 40%;
+        }
     }
 }
 

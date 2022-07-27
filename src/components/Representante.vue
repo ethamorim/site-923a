@@ -14,23 +14,25 @@
             </div>
         </div>
 
-        <div class="sobre">
-            <p>
-                {{ rep.sobre }}
-            </p>
-        </div>
+        <div class="outras-rep-info">
+            <div class="sobre">
+                <p>
+                    {{ rep.sobre }}
+                </p>
+            </div>
 
-        <div class="contato">
-            <h4>contato</h4>
-            <ul>
-                <li>
-                    <strong>telefone:</strong> {{ rep.telefone }}
-                </li>
+            <div class="contato">
+                <h4>contato</h4>
+                <ul>
+                    <li>
+                        <strong>telefone:</strong> {{ rep.telefone }}
+                    </li>
 
-                <li>
-                    <strong>email:</strong> {{ rep.email }}
-                </li>
-            </ul>
+                    <li>
+                        <strong>email:</strong> {{ rep.email }}
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 </template>
