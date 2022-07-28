@@ -74,7 +74,7 @@ http://localhost:8080
 
 Para o desenvolvimento do projeto foi usado o edit de código `VSCode` e o framework front-end `VueJS`. Foram utilizadas lógicas de componentes para desenvolver o site e torná-lo mais dinâmico e manutenível.
 
-## &copy; Copyright
+## Copyright
 
 Não há uma licença para o projeto, porém é de **extrema importância** ressaltar que a logo usada no início desse README, que também foi usada no projeto, não deve ser compartilhada ou usada para fins comerciais, tendo em vista que pertence aos alunos do curso de Desenvolvimento de Sistemas, que financiaram.
 
