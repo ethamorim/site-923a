@@ -6,7 +6,7 @@
 ![Versão do NPM](https://img.shields.io/badge/npm-v8.15.0-orange) ![Versão do Vue CLI](https://img.shields.io/badge/vue--cli-v5.0.8-blue) ![Status do projeto](https://img.shields.io/badge/status-em%20desenvolvimento-informational)
 
 ## Índices
-* [Descrição](#:bookmark_tabs:descrição)
+* [Descrição](#descrição)
 * [Funcionalidades](#funcionalidades)
 * [Acesso ao projeto](#acesso-ao-projeto)
 * [Rodar o projeto localmente](#rodar-o-projeto-localmente)
@@ -14,7 +14,7 @@
 * [Copyright](#copyright)
 
 
-## :bookmark_tabs: Descrição
+## Descrição
 
 Um site feito com o objetivo de juntar, em um lugar, as informações da turma 923a (curso de Desenvolvimento de Sistemas, Instituição Federal de Alagoas) e praticar minhas habilidades web usando VueJS.
 
