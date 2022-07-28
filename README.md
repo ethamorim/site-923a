@@ -11,7 +11,7 @@
 * [Acesso ao projeto](#acesso-ao-projeto)
 * [Rodar o projeto localmente](#rodar-o-projeto-localmente)
 * [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
-* [Copyright](#&copy;copyright)
+* [Copyright](#copyright)
 
 
 ## Descrição
