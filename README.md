@@ -11,7 +11,7 @@
 * [Acesso ao projeto](#acesso-ao-projeto)
 * [Rodar o projeto localmente](#rodar-o-projeto-localmente)
 * [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
-* [Copyright](#copyright)
+* [Copyright](#&copy;copyright)
 
 
 ## Descrição
@@ -20,7 +20,7 @@ Um site feito com o objetivo de juntar, em um lugar, as informações da turma 9
 
 Teve seu layout pensado pelo método de Mobile First, e consiste em um visual pensado para se relacionar com as cores do curso, tentando-se manter um padrão ou relação entre componentes.
 
-## :hammer: Funcionalidades
+## Funcionalidades
 
 - Func. 1: O programa detecta a plataforma sendo usada (pela propriedade do navegador `navigator.userAgent`) e usa essa informação para esconder, ou não, a barra de navegação do cabeçalho
     - Func. 1.1: Caso a plataforma sendo usada seja mobile e o cabeçalho seja escondido, uma botão de menu será disponibilzado para que se possa abrir a barra de navegação, sendo acompanhado de uma animação suave para deixar a usabilidade mais agradável
@@ -28,7 +28,7 @@ Teve seu layout pensado pelo método de Mobile First, e consiste em um visual pe
 - Func. 3: No momento, a seção de destaque traz a visualização dos uniformes do terceiro ano da nossa turma; ela contém botões que trocam dinamicamente os uniformes sendo exibidos
 - Func. 4: O rodapé contém links importantes da instituição que te levarão para os respectivos sites
 
-## :file_folder: Acesso ao projeto
+## Acesso ao projeto
 
 Você pode acessar o projeto em modo de produção no seguinte link: https://desenv-sistemas-923a.vercel.app/
 
@@ -38,7 +38,7 @@ Para fazer o deploy foi usado o Vercel CLI. Vercel é uma excelente plataforma p
 
 O projeto foi, antes do desenvolvimento, desenhado na ferramenta Figma, e pode ser acessado aqui: [Figma do Projeto](https://www.figma.com/file/Ak4NgJobqm6VhVf07iQzFy/site-923a?node-id=0%3A1)
 
-## :gear: Rodar o projeto localmente
+## Rodar o projeto localmente
 
 Para rodar o projeto localmente, certifique de que em sua máquina estão instaladas devidamente as dependências a seguir:
 - NodeJs ^16.0.0
@@ -70,7 +70,7 @@ Ex.:
 http://localhost:8080
 ```
 
-## :computer: Técnicas e tecnologias utilizadas:
+## Técnicas e tecnologias utilizadas:
 
 Para o desenvolvimento do projeto foi usado o edit de código `VSCode` e o framework front-end `VueJS`. Foram utilizadas lógicas de componentes para desenvolver o site e torná-lo mais dinâmico e manutenível.
 
