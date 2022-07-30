@@ -1,6 +1,7 @@
 <template>
     <section id="horarios" class="horarios">
+        <div class="divisor-triangular"></div>
         <h2>Horários de aula</h2>
-        <p>Os horários ainda não estão disponíveis. Em breve serão disponibilizados nessa seção.</p>
+        <img src="@/assets/imgs/HORARIO-OFICIAL-923A.jpg" alt="Horário das aulas da turma 923A">
     </section>
 </template>

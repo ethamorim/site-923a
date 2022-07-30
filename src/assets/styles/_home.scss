@@ -1,5 +1,6 @@
 .home {
     padding: 10px;
+    padding-bottom: 0;
     background-image: linear-gradient(
         320deg,
         $backgroundGradient1,
@@ -33,6 +34,7 @@
 }
 
 .representantes {
+    position: relative;
     z-index: 1;
     background-color: $representantes;
     padding: 15px;

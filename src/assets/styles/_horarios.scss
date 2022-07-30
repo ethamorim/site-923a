@@ -1,18 +1,26 @@
 .horarios {
+    position: relative;
     padding: 10px;
-    margin-bottom: 30px;
     text-align: center;
+    background-color: $branco;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    & p {
-        margin: 0;
+    .divisor-triangular {
+        position: absolute;
+        top: -7rem;
+        width: 100vw;
+        height: 100px;
+        background-color: $branco;
+        clip-path: polygon(0 90%, 100% 50%, 100% 100%, 0% 100%);
     }
-}
 
-@media screen and (min-width: 1024px) {
-    .horarios p {
-        font-size: 1.2rem;
+    & h2 {
+        color: #358932;
+    }
+
+    & img {
+        width: 100vw;
     }
 }
