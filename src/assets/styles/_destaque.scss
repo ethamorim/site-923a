@@ -1,5 +1,7 @@
 .destaque {
+    box-sizing: border-box;
     position: relative;
+    width: 100vw;
     border-top: 1px solid $brancoSite;
     border-bottom: 1px solid $brancoSite;
     display: flex;
@@ -58,6 +60,8 @@
 }
 
 .fardas-conteiner {
+    box-sizing: border-box;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,7 +139,8 @@
 
 .fardas {
     position: relative;
-    width: 400px; height: 400px;
+    width: 100vw; height: 400px;
+    max-width: 400px;
 
     &::before {
         content: ' ';
