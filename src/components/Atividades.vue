@@ -3,7 +3,7 @@
         <div class="atividades__header">
             <h2>Atividades</h2>
             <i class="material-icons-round" @click.left="abrirModalAdicionarAtividades">
-                library_add
+                add
             </i>
         </div>
 
@@ -12,7 +12,11 @@
                 <em>Ufa! Não há atividades cadastradas.</em>
             </p>
 
-            <CardAtividade v-for="ativ in atividades" :key="ativ.id" />
+            <CardAtividade
+                v-for="ativ in atividades"
+                :key="ativ.id"
+                :atividade="ativ"
+            />
         </div>
 
         <button class="ver-mais-atividades">Ver mais</button>
@@ -21,6 +25,7 @@
     <AdicionarAtividades
         v-if="modalAdicionarAtividadesAberto"
         @fecharModal="fecharModalAdicionarAtividades"
+        @reload="getAtividades"
     />
 </template>
 
@@ -46,13 +51,16 @@
             },
             fecharModalAdicionarAtividades() {
                 this.modalAdicionarAtividadesAberto = false;
+            },
+            getAtividades() {
+                axios.get('https://ws-site-923a.herokuapp.com/atividades')
+                    .then((promise) => {
+                        this.atividades = promise.data;
+                    });
             }
         },
         beforeMount() {
-            axios.get('https://ws-site-923a.herokuapp.com/atividades')
-                .then((promise) => {
-                    this.atividades = promise.data;
-                });
+            this.getAtividades();
         }
     }
 </script>

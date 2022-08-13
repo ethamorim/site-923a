@@ -1,4 +1,6 @@
 .atividades {
+    width: 100vw;
+    max-width: 450px;
     margin-bottom: 30px;
     font-family: $raleway;
 
@@ -15,12 +17,22 @@
 
         & i {
             position: absolute;
-            right: 0;
+            right: 1rem;
+
+            padding: 5px;
+            border-radius: 4px;
             font-size: 2rem;
+            background-color: $botaoComum;
+
+            &:hover {
+                background-color: $botaoComumHover;
+            }
         }
     }
 
     & .cards {
+        width: calc(100% - 20px);
+        padding: 10px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -32,32 +44,71 @@
         }
 
         & .card-atividade {
-            width: 100%; height: 230px;
-            max-width: 350px;
-            margin: 10px;
-            border-radius: 8px;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px 0;
+            border-radius: 4px;
             background-color: $cardAviso;
             display: flex;
-            flex-direction: column;
 
-            & .imagem-atividade {
-                height: 80%;
-            }
+            &__materia {
+                width: 100px;
+                min-height: 100px;
+                border-right: 2px solid #494949ab;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
 
-            & .titulo-atividade {
-                height: calc(230px - 80%);
-                background-color: $brancoSite;
-                border-bottom-right-radius: 8px;
-                border-bottom-left-radius: 8px;
-
-                text-align: center;
-                color: $preto;
-                font-weight: 300;
-                font-size: 1.4rem;
+                color: #ffffff;
+                font-weight: 900;
+                font-size: 2rem;
 
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
+            }
+
+            &__info {
+                width: calc(100% - 100px);
+                color: $preto;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                & .descricao {
+                    padding: 10px;
+                    margin-bottom: 10px;
+
+                    & p, & h3 {
+                        margin: 0;
+                    }
+
+                    & h3 {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                & .detalhes {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 40px;
+                    padding: 5px;
+                    border-bottom-right-radius: 4px;
+
+                    background-color: #cccccc75;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    & a {
+                        color: $preto;
+
+                        &:hover {
+                            color: #00000098
+                        }
+                    }
+                }
             }
         }
     }
