@@ -13,13 +13,24 @@
             </p>
 
             <CardAtividade
-                v-for="ativ in atividades"
+                v-for="ativ in arrAtividades"
                 :key="ativ.id"
                 :atividade="ativ"
             />
         </div>
 
-        <button class="ver-mais-atividades">Ver mais</button>
+        <button
+            class="ver-mais-atividades"
+            @click.prevent="abrirMaisAtividades"
+            v-if="!verMais && atividades.length > 3">
+            Ver mais
+        </button>
+        <button
+            class="ver-mais-atividades"
+            @click.prevent="fecharMaisAtividades"
+            v-if="verMais">
+            Ver menos
+        </button>
     </section>
 
     <AdicionarAtividades
@@ -39,10 +50,16 @@
             CardAtividade,
             AdicionarAtividades
         },
+        computed: {
+            arrAtividades() {
+                return this.getArrayDeAtividades();
+            }
+        },
         data() {
             return {
                 atividades: [],
                 modalAdicionarAtividadesAberto: false,
+                verMais: false,
             }
         },
         methods: {
@@ -57,6 +74,19 @@
                     .then((promise) => {
                         this.atividades = promise.data;
                     });
+            },
+            getArrayDeAtividades() {
+                if (!this.verMais) {
+                    return this.atividades.slice(0,3);
+                } else {
+                    return this.atividades;
+                }
+            },
+            abrirMaisAtividades() {
+                this.verMais = true;
+            },
+            fecharMaisAtividades() {
+                this.verMais = false;
             }
         },
         beforeMount() {

@@ -88,15 +88,18 @@
         }
 
         & .opcoes-fardas {
-            & button:hover {
-                background-color: $botaoToggleAtivo;
-                color: $preto;
+            & button {
+                &:hover {
+                    background-color: $botaoToggleAtivo;
+                    color: $preto;
+                }
+
+                & .ativa:hover {
+                    background-color: $botaoToggleAtivoHover;
+                    border: 4px solid $botaoToggleAtivoHover;
+                }
             }
 
-            & .ativa:hover {
-                background-color: $botaoToggleAtivoHover;
-                border: 4px solid $botaoToggleAtivoHover;
-            }
         }
     }
 
@@ -131,6 +134,7 @@
 
         & .opcoes-fardas {
             & button {
+                cursor: pointer;
                 height: 60px;
             }
         }
