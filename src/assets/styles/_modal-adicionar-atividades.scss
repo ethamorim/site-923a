@@ -1,0 +1,225 @@
+.modal-overlay {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000098;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteiner {
+    width: 90vw; max-width: 450px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    background-image: linear-gradient(120deg, $modal);
+
+    & input, & textarea, & select {
+        box-sizing: border-box;
+        padding: 5px;
+        font-family: $raleway;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    & input {
+        border: none;
+        border-bottom: 3px solid #a509ffaf;
+        background-color: transparent;
+        color: $branco;
+    }
+
+    & textarea, & select {
+        border: none;
+        border-radius: 4px;
+        background-color: $branco;
+    }
+}
+
+.modal {
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & legend {
+            margin: 5px 5px 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        & i {
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+        }
+    }
+
+    & fieldset {
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .posicao-input {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        & label {
+            margin-bottom: 2px;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+    }
+
+    .materias {
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & select {
+            width: 200px;
+        }
+
+        & .textoPreto {
+            color: $preto;
+        }
+
+        & .cor {
+            position: relative;
+        }
+
+        & .cor-escolhida {
+            z-index: 10;
+        }
+    }
+
+    .info-atividade {
+        display: flex;
+        justify-content: space-between;
+
+        & input[type="text"] {
+            width: 160px;
+        }
+
+        & input[type="date"] {
+            width: 100%;
+        }
+    }
+
+    .descricao {
+        & textarea {
+            width: 100%;
+            height: 100px;
+        }
+    }
+
+    .link-class {
+        & input {
+            width: 100%;
+        }
+    }
+
+    .adicionar-ativ {
+        & button {
+            width: 200px;
+            height: 40px;
+            margin: 15px auto 5px;
+            border: none;
+            border-radius: 32px;
+
+            background-color: #a509ffaf;
+            color: $branco;
+            text-transform: uppercase;
+            font-family: $poppins;
+            font-weight: 600;
+            letter-spacing: .05rem;
+
+            display: block;
+
+            &:hover {
+                background-color: #a509ff33;
+            }
+        }
+    }
+}
+
+.color-picker {
+    position: absolute;
+    top: 1.8rem;
+    right: 0;
+
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+    background-color: $branco;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.picker {
+    width: 30px; height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #cccccc;
+
+    & .holder {
+        background-color: transparent;
+    }
+}
+
+.preto {
+    background-image: linear-gradient(45deg, #000000, #555555);
+}
+
+.vermelho {
+    background-image: linear-gradient(45deg, #9c0000, #ff6060);
+}
+
+.laranja {
+    background-image: linear-gradient(45deg, #b46600, #ffa641);
+}
+
+.amarelo {
+    background-image: linear-gradient(45deg, #ca9400, #ffc400);
+}
+
+.verde {
+    background-image: linear-gradient(45deg, #189200, #22ce00);
+}
+
+.azul-claro {
+    background-image: linear-gradient(45deg, #008192, #00c9e4);
+}
+
+.azul {
+    background-image: linear-gradient(45deg, #002292, #2054ff);
+}
+
+.roxo {
+    background-image: linear-gradient(45deg, #4b0092, #7600e4);
+}
+
+.rosa {
+    background-image: linear-gradient(45deg, #ac00a3, #ff57e9);
+}
+
+.branco {
+    background-image: linear-gradient(45deg, #9b9b9b, #ffffff);
+}

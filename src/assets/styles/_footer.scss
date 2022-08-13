@@ -1,4 +1,6 @@
 footer {
+    z-index: 1;
+    position: relative;
     background-color: $footer;
     display: flex;
     flex-direction: column;

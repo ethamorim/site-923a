@@ -1,15 +1,35 @@
 .atividades {
+    margin-bottom: 30px;
+    font-family: $raleway;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: $raleway;
-    margin-bottom: 30px;
+
+    &__header {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & i {
+            position: absolute;
+            right: 0;
+            font-size: 2rem;
+        }
+    }
 
     & .cards {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        .sem-atividades {
+            margin: 0;
+            font-size: 1.2rem;
+        }
 
         & .card-atividade {
             width: 100%; height: 230px;
