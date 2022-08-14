@@ -1,6 +1,6 @@
 <h1>Site da 923a (Desenvolvimento de Sistemas)</h1>
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/87045182/181387130-c456a222-a7eb-4f46-9269-fe333c7d6f44.png" style="width: 100px">
+    <img src="https://user-images.githubusercontent.com/87045182/181387130-c456a222-a7eb-4f46-9269-fe333c7d6f44.png" alt="Logo do 3° ano do curso de Desenvolvimento de Sistemas" style="width: 100px">
 </p>
 
 ![Versão do NPM](https://img.shields.io/badge/npm-v8.15.0-orange) ![Versão do Vue CLI](https://img.shields.io/badge/vue--cli-v5.0.8-blue) ![Status do projeto](https://img.shields.io/badge/status-em%20desenvolvimento-informational)
@@ -87,7 +87,7 @@ http://localhost:8080
 
 ## Técnicas e tecnologias utilizadas:
 
-Para o desenvolvimento do projeto foi usado o edit de código `VSCode` e o framework front-end `VueJS`. Foram utilizadas lógicas de componentes para desenvolver o site e torná-lo mais dinâmico e manutenível.
+Para o desenvolvimento do projeto foi usado o editor de código `VSCode` e o framework front-end `VueJS`. Foram utilizadas lógicas de componentes para desenvolver o site e torná-lo mais dinâmico e manutenível.
 
 ## Copyright
 
