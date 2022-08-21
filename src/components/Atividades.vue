@@ -16,6 +16,7 @@
                 v-for="ativ in arrAtividades"
                 :key="ativ.id"
                 :atividade="ativ"
+                @getAtividades="getAtividades"
             />
         </div>
 
