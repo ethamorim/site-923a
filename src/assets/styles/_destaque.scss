@@ -233,7 +233,7 @@
     }
 }
 
-.pedido {
+.caminho {
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -251,21 +251,8 @@
         margin: 10px 0;
     }
 
-    & a {
-        width: 250px; height: 50px;
-        margin: 10px;
-        background-color: $botaoComum;
-        text-transform: uppercase;
-        color: $brancoSite;
-        text-decoration: none;
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:active {
-            background-color: $botaoComumHover;
-        }
+    & .obs {
+        font-size: .8rem;
     }
 }
 

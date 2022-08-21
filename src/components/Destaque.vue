@@ -35,19 +35,15 @@
         </div>
     </section>
 
-    <section class="pedido">
-        <h3>Faça seu pedido pelo forms!</h3>
-        <p class="obs">
-            Pague metade do preço até o dia 25 de Julho
-            e pague o restante apenas quando receber as fardas
+    <section class="caminho">
+        <h3>Elas estão a caminho!</h3>
+        <p>
+            Os pedidos já foram confirmados e as fardas estão finalmente sendo produzidas.
         </p>
 
-        <a
-            class="botao-forms"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe5kXO9uitw_3bT6dkX_nSnTp6i65uQRKh8rCM4HR7anw8Gdw/viewform"
-            target="_blank">
-            Forms
-        </a>
+        <p class="obs">
+            Para mais informações contate a vice-representante Alexia
+        </p>
     </section>
 </template>
 
