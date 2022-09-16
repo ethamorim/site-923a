@@ -15,14 +15,31 @@
         width: 100vw;
         height: 100px;
         background-color: $branco;
-        clip-path: polygon(0 90%, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 90%, 100% 2%, 100% 100%, 0% 100%);
     }
 
     & h2 {
         color: #358932;
     }
 
+    &__conteiner {
+        overflow: hidden;
+    }
+
     & img {
-        width: 100vw;
+        position: relative;
+        bottom: 2rem;
+        width: 52%;
+        transform: scale(2);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .horarios {
+
+        & img {
+            bottom: 5rem;
+            width: 50%;
+        }
     }
 }
