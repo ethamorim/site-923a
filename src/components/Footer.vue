@@ -68,7 +68,7 @@
                         </li>
                         <li>
                             <span><strong>mundo do trabalho:</strong></span>
-                            <a href="mundodotrabalho.ifal.edu.br/" target="_blank">
+                            <a href="https://mundodotrabalho.ifal.edu.br/" target="_blank">
                                 <span class="site">mundodotrabalho.ifal.edu.br</span>
                                 <i class="material-icons-round">open_in_new</i>
                             </a>

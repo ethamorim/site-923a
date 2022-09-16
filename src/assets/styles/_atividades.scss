@@ -140,14 +140,20 @@
 
 @media screen and (min-width: 1024px) {
     .atividades {
-        width: 100%;
+        width: 100vw;
+        max-width: 1300px;
+        justify-content: center;
 
         & .cards {
-            width: inherit;
+            box-sizing: border-box;
+            width: 100%;
+            justify-content: flex-start;
 
             & .card-atividade {
-                min-width: 450px;
-                width: 30%; height: 350px;
+                min-width: 400px;
+                width: 30%;
+                height: 350px;
+                margin: 10px;
 
                 & .titulo-atividade {
                     height: 70px;
