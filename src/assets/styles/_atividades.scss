@@ -49,16 +49,15 @@
             max-width: 400px;
             height: fit-content;
             margin: 10px 0;
-            border-radius: 4px;
+            border-radius: 12px;
             background-color: $cardAviso;
             display: flex;
 
             &__materia {
                 width: 100px;
                 min-height: 100px;
-                border-right: 2px solid #494949ab;
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
 
                 color: #ffffff;
                 font-weight: 900;
@@ -79,7 +78,6 @@
 
                 & .descricao {
                     padding: 10px;
-                    margin-bottom: 10px;
 
                     & p, & h3 {
                         margin: 0;
@@ -101,7 +99,7 @@
                     width: 100%;
                     height: 40px;
                     padding: 5px;
-                    border-bottom-right-radius: 4px;
+                    border-bottom-right-radius: 12px;
 
                     background-color: #cccccc75;
                     display: flex;
@@ -138,11 +136,10 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
     .atividades {
         width: 100vw;
         max-width: 1300px;
-        justify-content: center;
 
         &__header {
             & i {
@@ -153,16 +150,33 @@
         & .cards {
             box-sizing: border-box;
             width: 100%;
-            justify-content: flex-start;
+            align-items: center;
+
+            &-to-left {
+                box-sizing: border-box;
+                max-width: 900px;
+                display: flex;
+                flex-wrap: wrap;
+            }
 
             & .card-atividade {
                 min-width: 400px;
                 width: 30%;
-                height: 350px;
+                height: 200px;
                 margin: 10px;
 
                 & .titulo-atividade {
                     height: 70px;
+                }
+
+                &__info {
+                    & .descricao {
+                        overflow: hidden;
+
+                        & p {
+                            height: 110px;
+                        }
+                    }
                 }
             }
         }
@@ -177,4 +191,14 @@
         }
     }
 
+}
+
+@media screen and (min-width: 1280px) {
+    .atividades {
+        & .cards {
+            &-to-left {
+                max-width: 1300px;
+            }
+        }
+    }
 }

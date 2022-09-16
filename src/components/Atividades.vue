@@ -8,16 +8,18 @@
         </div>
 
         <div class="cards">
-            <p class="sem-atividades" v-if="!atividades.length">
-                <em>Ufa! Não há atividades cadastradas.</em>
-            </p>
+            <div class="cards-to-left">
+                <p class="sem-atividades" v-if="!atividades.length">
+                    <em>Ufa! Não há atividades cadastradas.</em>
+                </p>
 
-            <CardAtividade
-                v-for="ativ in arrAtividades"
-                :key="ativ.id"
-                :atividade="ativ"
-                @getAtividades="getAtividades"
-            />
+                <CardAtividade
+                    v-for="ativ in arrAtividades"
+                    :key="ativ.id"
+                    :atividade="ativ"
+                    @getAtividades="getAtividades"
+                />
+            </div>
         </div>
 
         <button
