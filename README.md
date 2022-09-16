@@ -30,16 +30,18 @@ Teve seu layout pensado pelo método de Mobile First, e consiste em um visual pe
 - Func. 4: O rodapé contém links importantes da instituição que te levarão para os respectivos sites
 - Func. 5: É possível cadastrar atividades na seção de Atividades, podendo, assim, juntar todas as atividades da turma em apenas um lugar, tendo em vista que professores diferentes usam plataformas diferentes
     - Func. 5.1: Um ícone de "adicionar" é disponibilizado ao lado do título da seção de Atividades, este abre uma janela modal contendo um formulário especializado para a inclusão de uma nova atividade **(a ideia futuramente é que apenas os representantes tenham acesso a essa funcionalidade)**
-    - Func. 5.2: É possível escolher a cor con que a matéria vai ser disponibilizada na página principal com um _color picker_ desenvolvido manualmente
+    - Func. 5.2: É possível escolher a cor com que a matéria vai ser disponibilizada na página principal com um _color picker_ desenvolvido manualmente
     - Func. 5.3: Caso haja a tentativa de adicionar uma atividade com informações vazias ou inválidas, a janela acusará um erro que será visualizado no rodapé do modal
     - Func. 5.4: Em caso de atividade válida adicionada, a janela modal fechará, e em poucos segundos a seção de atividades atualizará com as novas informações
+    - Func. 5.5: É possível deletar uma atividade apertando na pequena lixeira no canto superior direito do cartão de atividade **(para o caso de atividades fora do prazo, a ideia seria que elas fossem removidas automaticamente)**
+    - Func. 5.6: As atividades são automaticamente ordenadas pela data mais próxima, trazendo uma organização maior à exibição 
 - Func. 6: As atividades que possuírem link para a atividade na plataforma Google Classroom disponibilizarão um ícone no canto superior direito que levará o aluno diretamente para a respectiva atividade (obviamente não funcionará para quem não está na sala correspondente, tendo em vista que a funcionalidade é voltada exclusivamente para os alunos da 923A)
 
 ## API
 
 Para a persistência das informações e devido funcionamento do cadastro das atividades, desenvolvi um Serviço Web REST (RESTful Web Service) em Java usando a _framework_ Spring e o banco de dados não relacional MongoDB. Dessa forma, adicionar e visualizar as atividades da turma se torna mais dinâmico e fácil de manter. 
 
-Até o momento, nela é possível coletar as atividades (GET) e adicionar novas atividades (POST). Também é possível deletar as atividades (DELETE), porém essa funcionalidade ainda não foi implementada no front-end. Falta a funcionalidade UPDATE para se ter um CRUD completo.
+Até o momento, nela é possível coletar as atividades (GET), adicionar novas atividades (POST) e removê-las (DELETE). Falta a funcionalidade UPDATE para se ter um CRUD completo.
 
 O projeto foi armazenado em um repositório separado, e pode ser acessado nesse link: https://github.com/deisantix/api-site-923a
 
