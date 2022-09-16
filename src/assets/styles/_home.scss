@@ -52,8 +52,16 @@
         font-weight: 600;
     }
 
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     & .card-representante {
         position: relative;
+        width: 100%;
+        max-width: 600px;
         margin: 10px 0;
         padding: 10px;
         border-radius: 8px;
@@ -152,10 +160,42 @@
     }
 }
 
+@media screen and (min-width: 460px) {
+    .representantes {
+        &__conteiner {
+            width: 100%;
+        }
+
+        & .card-representante {
+
+            & .outras-rep-info {
+                margin-top: 10px;
+            }
+
+            & .sobre {
+                position: absolute;
+                bottom: 7.2rem;
+                left: 11.5rem;
+                width: 50%;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .representantes {
+
+        &__conteiner {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         & .card-representante {
-            width: 830px;
+            min-width: 300px;
+            width: 50%;
+            margin: 10px;
 
             .rep {
                 & img {
@@ -173,15 +213,39 @@
                 }
             }
 
+            & .sobre {
+                left: 16rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1270px) {
+    .representantes {
+
+        & .card-representante {
+
             & .outras-rep-info {
-                width: 65%;
                 position: absolute;
-                bottom: .5rem;
-                right: 10px;
+                bottom: 1rem;
+                left: 16.5rem;
+                width: 60%;
+                margin: 0;
             }
 
             & .sobre {
-                width: 80%;
+                position: static;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1370px) {
+    .representantes {
+        & .card-representante {
+            .outras-rep-info {
+                width: 60%;
             }
         }
     }

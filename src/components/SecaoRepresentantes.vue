@@ -2,11 +2,13 @@
     <section class="representantes">
         <h2>Representantes da 923A</h2>
 
-        <Representante
-            v-for="(representante, i) in representantes"
-            :key="i"
-            :rep="representante"
-        />
+        <div class="representantes__conteiner">
+            <Representante
+                v-for="(representante, i) in representantes"
+                :key="i"
+                :rep="representante"
+            />
+        </div>
     </section>
 </template>
 
