@@ -144,6 +144,12 @@
         max-width: 1300px;
         justify-content: center;
 
+        &__header {
+            & i {
+                right: 3rem;
+            }
+        }
+
         & .cards {
             box-sizing: border-box;
             width: 100%;
