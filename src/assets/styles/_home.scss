@@ -1,12 +1,12 @@
 .home {
     padding: 10px;
     padding-bottom: 0;
-    background-image: linear-gradient(
-        320deg,
-        $backgroundGradient1,
-        $backgroundGradient2,
-        $backgroundGradient3
-    );
+    background-image:
+        linear-gradient(
+            $backgroundGradient3 40%,
+            $backgroundGradient1 60%
+        );
+
     display: flex;
     flex-direction: column;
     align-items: center;

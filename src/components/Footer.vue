@@ -44,8 +44,6 @@
                             <span>cree@ifal.edu.br</span>
                         </li>
                     </ul>
-
-                    <p class="em-breve-professores">em breve os contatos dos professores estarão disponíveis</p>
                 </section>
 
                 <section class="outros-sites">
