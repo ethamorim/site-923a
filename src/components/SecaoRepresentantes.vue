@@ -23,7 +23,7 @@
             return {
                 representantes: [
                     {
-                        imagem: 'https://user-images.githubusercontent.com/87045182/180874614-8191bd44-3aa1-437a-ac75-7bc3c6a97dd7.jpeg',
+                        imagem: 'https://raw.githubusercontent.com/ethamorim/site-923a/main/public/eu-2023.jpeg',
                         altImagem: 'foto de Ytalo dos Santos Amorim, representante da 923A',
                         bandeira: 'bandeira-gay',
                         nome: 'Ytalo',
